@@ -101,7 +101,7 @@
     
     
     __weak HJBrowserImageView *imageViewWeak = self;
-
+#修改sd_setImageWithURL报错问题。
     [self sd_setImageWithURL:url placeholderImage:placeholder options:SDWebImageRetryFailed progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
         imageViewWeak.progress = (CGFloat)receivedSize / expectedSize;
     } completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
